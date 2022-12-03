@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS Project</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>CRUDS</h2>
+      <p>Product Management System</p>
+      <div class="inputs">
+        <input type="text" id="title" placeholder="Title" />
+        <div class="price-inputs">
+          <input type="number" id="price" placeholder="Price" />
+          <input type="number" id="taxes" placeholder="Taxes" />
+          <input type="number" id="ads" placeholder="Ads" />
+          <input type="number" id="discount" placeholder="Discount" />
+          <span id="total"></span>
+        </div>
+        <input type="number" id="count" placeholder="Count" />
+        <input type="text" id="category" placeholder="Category" />
+        <input type="button" id="create" value="Create"  />
+      </div>
+
+      <div class="outputs">
+        <input type="search" id="search" onkeyup="searchForIdenticalData(this.value)" placeholder="Search" />
+        <div class="search-btns">
+          <button id="searchtitle" onclick="searchBy(this.id)">Search By Title</button>
+          <button id="searchcategory" onclick="searchBy(this.id)">Search By Category</button>
+        </div>
+        <button id="clear"></button>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Taxes</th>
+                <th>Ads</th>
+                <th>Discount</th>
+                <th>Total</th>
+                <th>Category</th>
+                <th>Update</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
